@@ -20,10 +20,7 @@ public class DeveloperController {
     }
 
     @PostMapping
-    public void addNewDeveloper( @RequestBody Developer developer){
-            developerService.insertDeveloper(developer);
-
-    }
+    public void addNewDeveloper( @RequestBody Developer developer){ developerService.insertDeveloper(developer);}
 
     @GetMapping("{id}")
     public Developer getDeveloperById(@PathVariable Integer id){
@@ -36,7 +33,5 @@ public class DeveloperController {
     }
 
     @PutMapping("{id}")
-    public void updateDeveloperById(@PathVariable Integer id, @RequestBody Developer developer){
-        developerService.updateDeveloperById(id, developer);
-    }
+    public void updateDeveloperById(@PathVariable Integer id, @RequestBody Developer developer){ developerService.updateDeveloperById(id, developer);}
 }
